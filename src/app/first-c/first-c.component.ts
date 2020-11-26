@@ -31,7 +31,7 @@ export class FirstCComponent implements OnInit {
   selectAll(event) {
     const checked = event.target.checked;
     this.checkedobj = checked;
-    // if (this.checkedobj === true) {
+    if (this.checkedobj === true) {
     for (let i = 0; i < this.data.length; i++) {
       if (i <= this.data.length) {
         this.data[i].flag = checked;
@@ -44,25 +44,25 @@ export class FirstCComponent implements OnInit {
         this.arrayofEmails.push(this.data[i]);
       }
     }
-  // } else {
-    // for (let i = 0; i < this.data.length; i++) {
-    //   if (i <= this.data.length) {
-    //     this.data[i].flag = checked;
-    //   }
-    // }
-    // this.arrayofEmails = [];
-  // }
+  } else {
+    for (let i = 0; i < this.data.length; i++) {
+      if (i <= this.data.length) {
+        this.data[i].flag = checked;
+      }
+    }
+    this.arrayofEmails = [];
+  }
 
   }
 
   singleSelect(event, obj) {
     const checked = event.target.checked;
     this.checkedobj1 = checked;
-    // if (this.checkedobj1 === true) {
+    if (this.checkedobj1 === true) {
     this.arrayofEmails.push(obj);
-    // } else {
-      // this.arrayofEmails.pop();
-    // }
+    } else {
+      this.arrayofEmails.pop();
+    }
   }
 
   saveEmails() {
