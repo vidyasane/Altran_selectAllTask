@@ -46,8 +46,8 @@
             <div class="card">
                 <div class="card-body">
                     <select>
-                        <option>
-                            {{relatCusCode}}</option>
+                        <option *ngFor="let e of relatCusCode" value="{{e}}" >
+                            {{e}}</option>
                     </select>
                 </div>
             </div>

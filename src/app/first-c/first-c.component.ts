@@ -4,7 +4,11 @@ import { DataServiceService } from '../data-service.service';
 @Component({
   selector: 'app-first-c',
   templateUrl: './first-c.component.html',
-  styleUrls: ['./first-c.component.css']
+  styleUrls: ['./first-c.component.css'],
+  // tslint:disable-next-line:no-host-metadata-property
+  host: {
+    '(document:click)': 'onClick($event)',
+  },
 })
 export class FirstCComponent implements OnInit {
   jsonData: any;
@@ -107,5 +111,9 @@ export class FirstCComponent implements OnInit {
       }
     }
   }
+
+  onClick(event) {
+    
+   }
 
 }

@@ -81,37 +81,37 @@
       "comId":1,
       "comName":"Ojas Innovative Technologies",
       "comCode":"OITH",
-      "relatCusCode":"OITH-TCS"
+      "relatCusCode":["OITH-TCS","dhf","fgasdrtdf","sfhdgsfhghdfg"]
     },
     {
       "comId":2,
       "comName":"Altran",
       "comCode":"ALTH",
-      "relatCusCode":"ALTH-TCS"
+      "relatCusCode":["ALTH-TCS","dfff"]
     },
     {
       "comId":3,
       "comName":"Persistant",
       "comCode":"PSTH",
-      "relatCusCode":"PSTH-TCS"
+      "relatCusCode":["PSTH-TCS","sdghjfgdhjfd"]
     },
     {
       "comId":4,
       "comName":"Ojas Innovative Technologies",
       "comCode":"OITH",
-      "relatCusCode":"OITH-TCS"
+      "relatCusCode":["OITH-TCS","dhfjfg"]
     },
     {
       "comId":5,
       "comName":"Ojas Innovative Technologies",
       "comCode":"OITH",
-      "relatCusCode":"OITH-TCS"
+      "relatCusCode":["OITH-TCS","ffdsf"]
     },
     {
       "comId":6,
       "comName":"Ojas Innovative Technologies",
       "comCode":"OITH",
-      "relatCusCode":"OITH-TCS"
+      "relatCusCode":["OITH-TCS","dsghfdghfr"]
     }
   ]
 }
