@@ -14,6 +14,7 @@ export class FirstCComponent implements OnInit {
   data;
   count = 0;
   checkedobj1: any;
+  unselIndex: number;
 
   constructor(private ser: DataServiceService) { }
 
@@ -32,26 +33,25 @@ export class FirstCComponent implements OnInit {
     const checked = event.target.checked;
     this.checkedobj = checked;
     if (this.checkedobj === true) {
-    for (let i = 0; i < this.data.length; i++) {
-      if (i <= this.data.length) {
-        this.data[i].flag = checked;
+      for (let i = 0; i < this.data.length; i++) {
+        if (i <= this.data.length) {
+          this.data[i].flag = checked;
+        }
       }
-    }
-
-    // tslint:disable-next-line:prefer-for-of
-    for (let i = 0; i < this.data.length; i++) {
-      if (this.data[i].flag === true) {
-        this.arrayofEmails.push(this.data[i]);
+      // tslint:disable-next-line:prefer-for-of
+      for (let i = 0; i < this.data.length; i++) {
+        if (this.data[i].flag === true) {
+          this.arrayofEmails.push(this.data[i]);
+        }
       }
-    }
-  } else {
-    for (let i = 0; i < this.data.length; i++) {
-      if (i <= this.data.length) {
-        this.data[i].flag = checked;
+    } else {
+      for (let i = 0; i < this.data.length; i++) {
+        if (i <= this.data.length) {
+          this.data[i].flag = checked;
+        }
       }
+      this.arrayofEmails = [];
     }
-    this.arrayofEmails = [];
-  }
 
   }
 
@@ -59,9 +59,10 @@ export class FirstCComponent implements OnInit {
     const checked = event.target.checked;
     this.checkedobj1 = checked;
     if (this.checkedobj1 === true) {
-    this.arrayofEmails.push(obj);
+      this.arrayofEmails.push(obj);
     } else {
-      this.arrayofEmails.pop();
+      this.unselIndex = this.arrayofEmails.indexOf(obj);
+      this.arrayofEmails.splice(this.unselIndex, 1);
     }
   }
 
@@ -71,10 +72,10 @@ export class FirstCComponent implements OnInit {
     // tslint:disable-next-line:prefer-for-of
     for (let i = 0; i < this.arrayofEmails.length; i++) {
       if (this.count <= 9) {
-        this.arrayofEmails1.push(this.data[i]);
+        this.arrayofEmails1.push(this.arrayofEmails[i]);
         this.count++;
       } else {
-        alert('dsgfhdgfhj');
+        alert('Emails are more than 10...Select only few.');
         // this.count = 0;
         this.arrayofEmails1 = [];
         break;

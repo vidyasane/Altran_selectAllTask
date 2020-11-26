@@ -1,6 +1,6 @@
-<div class="container">
+<div class="jumbotron mx-auto col-8 mt-5">
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Available Email List</h5>
@@ -8,20 +8,23 @@
                         <input type="checkbox" (change)="selectAll($event)"> Select All
                         <div *ngFor="let d of data">
                             <p class="card-text">
-                                <input type="checkbox" (change)="singleSelect($event,d)" [checked]="d.flag"> {{d.emailName}}</p>
+                                <input type="checkbox" (change)="singleSelect($event,d)" [checked]="d.flag">
+                                {{d.emailName}}</p>
                         </div>
                     </section>
-                    <button type="button" class="btn btn-primary mt-3" (click)="saveEmails()">Add Emails</button>
+                    <button type="button" class="btn btn-primary mt-3" (click)="saveEmails()" style="right:0px;">Add Emails</button>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Selected Email List</h5>
+                    <section class="scroll">
                     <div *ngFor="let e of arrayofEmails1">
-                    <p class="card-text">{{e.emailName}}</p>
-                </div>
+                        <p class="card-text">{{e.emailName}}</p>
+                    </div>
+                </section>
                 </div>
             </div>
         </div>
