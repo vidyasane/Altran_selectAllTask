@@ -1,0 +1,79 @@
+{
+  "emailList": [
+    {
+      "id": 1,
+      "emailName": "vidya1@gmail.com",
+      "flag":false
+    },
+    {
+      "id": 2,
+      "emailName": "vidya2@gmail.com",
+      "flag":false
+    },
+    {
+      "id": 3,
+      "emailName": "vidya3@gmail.com",
+      "flag":false
+    },
+    {
+      "id": 4,
+      "emailName": "vidya4@gmail.com",
+      "flag":false
+    },
+    {
+      "id": 5,
+      "emailName": "vidya5@gmail.com",
+      "flag":false
+    },
+    {
+      "id": 6,
+      "emailName": "vidya6@gmail.com",
+      "flag":false
+    },
+    {
+      "id": 7,
+      "emailName": "vidya7@gmail.com",
+      "flag":false
+    },
+    {
+      "id": 8,
+      "emailName": "vidya8@gmail.com",
+      "flag":false
+    },
+    {
+      "id": 9,
+      "emailName": "vidya9@gmail.com",
+      "flag":false
+    },
+    {
+      "id": 10,
+      "emailName": "vidya10@gmail.com",
+      "flag":false
+    },
+    {
+      "id": 11,
+      "emailName": "vidya11@gmail.com",
+      "flag":false
+    },
+    {
+      "id": 12,
+      "emailName": "vidya12@gmail.com",
+      "flag":false
+    },
+    {
+      "emailName": "vidya1@gmail.com,vidya2@gmail.com",
+      "flag":false,
+      "id": 13
+    },
+    {
+      "emailName": "vidya4@gmail.com",
+      "id": 14,
+      "flag":false
+    },
+    {
+      "emailName": "vidya11@gmail.com",
+      "flag":false,
+      "id": 15
+    }
+  ]
+}

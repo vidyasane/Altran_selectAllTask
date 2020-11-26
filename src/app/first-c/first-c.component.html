@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Available Email List</h5>
+                    <section class="scroll">
+                        <input type="checkbox" (change)="selectAll($event)"> Select All
+                        <div *ngFor="let d of data">
+                            <p class="card-text">
+                                <input type="checkbox" (change)="singleSelect($event,d)" [checked]="d.flag"> {{d.emailName}}</p>
+                        </div>
+                    </section>
+                    <button type="button" class="btn btn-primary mt-3" (click)="saveEmails()">Add Emails</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Selected Email List</h5>
+                    <div *ngFor="let e of arrayofEmails1">
+                    <p class="card-text">{{e.emailName}}</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
