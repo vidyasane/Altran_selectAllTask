@@ -6,10 +6,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataServiceService {
 
+
   constructor(private http: HttpClient) {
   }
 
   getData() {
     return this.http.get('http://localhost:3000/emailList');
+  }
+
+
+  getCompanyData() {
+    return this.http.get('http://localhost:3000/companyDetails');
   }
 }

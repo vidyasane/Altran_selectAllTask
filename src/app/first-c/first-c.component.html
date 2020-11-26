@@ -12,7 +12,8 @@
                                 {{d.emailName}}</p>
                         </div>
                     </section>
-                    <button type="button" class="btn btn-primary mt-3" (click)="saveEmails()" style="right:0px;">Add Emails</button>
+                    <button type="button" class="btn btn-primary mt-3" (click)="saveEmails()" style="right:0px;">Add
+                        Emails</button>
                 </div>
             </div>
         </div>
@@ -21,10 +22,33 @@
                 <div class="card-body">
                     <h5 class="card-title">Selected Email List</h5>
                     <section class="scroll">
-                    <div *ngFor="let e of arrayofEmails1">
-                        <p class="card-text">{{e.emailName}}</p>
-                    </div>
-                </section>
+                        <div *ngFor="let e of arrayofEmails1">
+                            <p class="card-text">{{e.emailName}}</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <select (change)="selectedCompany($event.target.value)">
+                        <option *ngFor="let d of CompanyDetails" value="{{d.comId}}" >
+                            {{d.comCode}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <select>
+                        <option>
+                            {{relatCusCode}}</option>
+                    </select>
                 </div>
             </div>
         </div>

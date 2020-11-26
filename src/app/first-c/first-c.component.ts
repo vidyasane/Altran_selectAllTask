@@ -15,11 +15,17 @@ export class FirstCComponent implements OnInit {
   count = 0;
   checkedobj1: any;
   unselIndex: number;
+  comData;
+  CompanyDetails;
+  selectedCompanyData: any;
+  abc: any;
+  relatCusCode: any;
 
   constructor(private ser: DataServiceService) { }
 
   ngOnInit() {
     this.data1();
+    this.getCompanyDetails();
   }
 
   data1() {
@@ -79,6 +85,25 @@ export class FirstCComponent implements OnInit {
         // this.count = 0;
         this.arrayofEmails1 = [];
         break;
+      }
+    }
+  }
+
+  getCompanyDetails() {
+    this.ser.getCompanyData().subscribe(res => {
+    this.comData = res;
+    this.CompanyDetails = this.comData;
+    });
+  }
+
+
+  selectedCompany(data) {
+    this.selectedCompanyData = data;
+    // tslint:disable-next-line:prefer-for-of
+    for (let index = 0; index < this.CompanyDetails.length; index++) {
+      if (Number(this.selectedCompanyData) === this.CompanyDetails[index].comId) {
+        this.abc = this.CompanyDetails[index];
+        this.relatCusCode = this.abc.relatCusCode;
       }
     }
   }

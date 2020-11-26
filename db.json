@@ -75,5 +75,43 @@
       "flag":false,
       "id": 15
     }
+  ],
+  "companyDetails" : [ 
+    {
+      "comId":1,
+      "comName":"Ojas Innovative Technologies",
+      "comCode":"OITH",
+      "relatCusCode":"OITH-TCS"
+    },
+    {
+      "comId":2,
+      "comName":"Altran",
+      "comCode":"ALTH",
+      "relatCusCode":"ALTH-TCS"
+    },
+    {
+      "comId":3,
+      "comName":"Persistant",
+      "comCode":"PSTH",
+      "relatCusCode":"PSTH-TCS"
+    },
+    {
+      "comId":4,
+      "comName":"Ojas Innovative Technologies",
+      "comCode":"OITH",
+      "relatCusCode":"OITH-TCS"
+    },
+    {
+      "comId":5,
+      "comName":"Ojas Innovative Technologies",
+      "comCode":"OITH",
+      "relatCusCode":"OITH-TCS"
+    },
+    {
+      "comId":6,
+      "comName":"Ojas Innovative Technologies",
+      "comCode":"OITH",
+      "relatCusCode":"OITH-TCS"
+    }
   ]
 }
