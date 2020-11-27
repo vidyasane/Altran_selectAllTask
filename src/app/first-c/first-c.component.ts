@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataServiceService } from '../data-service.service';
+declare var $;
 
 @Component({
   selector: 'app-first-c',
@@ -24,12 +25,21 @@ export class FirstCComponent implements OnInit {
   selectedCompanyData: any;
   abc: any;
   relatCusCode: any;
+  relatedShow = false;
+  relatedShow1: boolean;
+  selectedCompanyData1: any;
 
-  constructor(private ser: DataServiceService) { }
+  constructor(private ser: DataServiceService) {
+    this.relatedShow1 = false;
+  }
 
   ngOnInit() {
     this.data1();
     this.getCompanyDetails();
+    // tslint:disable-next-line:whitespace
+    window.addEventListener('click', () => {
+      this.relatedShow1 = false;
+    } , true);
   }
 
   data1() {
@@ -102,6 +112,7 @@ export class FirstCComponent implements OnInit {
 
 
   selectedCompany(data) {
+    this.relatedShow = true;
     this.selectedCompanyData = data;
     // tslint:disable-next-line:prefer-for-of
     for (let index = 0; index < this.CompanyDetails.length; index++) {
@@ -112,8 +123,7 @@ export class FirstCComponent implements OnInit {
     }
   }
 
-  onClick(event) {
-    
-   }
-
+close() {
+  this.relatedShow1 = true;
+}
 }
